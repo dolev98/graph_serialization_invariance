@@ -1,0 +1,23 @@
+name: erdos
+datasets:
+  erdos:
+    tasks: [shortest_path, triangles, degree, edge_number, connected_component_number, diameter,
+            density, edge_existence, has_cycle, neighbor, common_neighbor, bridges]
+    n_per_task: 100
+    seed: 0
+    max_prompt_chars: 6000
+    # canonical = native Erdős serialization (Herbst baseline): edge list, native BFS order, plain wording
+    variants:
+      relabel: {seeds: 3}                        # relabel-then-sort (Herbst); reference = sorted identity
+      order: {kinds: [sorted_st, s_sorted_t_shuffled, shuffle_all], seeds: 1}
+      structure: {toggle: true, replicated: true}
+      syntax: {kinds: [json, networkx_code]}     # the transcription ladder: prose -> json -> networkx code
+# Three modes; the two code modes are crossed with the library arms below, so one variant
+# costs 1 + 2 + 2 = 5 calls. One-shot (worked-example) modes were removed: the fixed
+# template in the code prompt now does what the exemplar did, and does it in both arms.
+modes: [direct, code, graph_as_code]
+libraries: [networkx, native]
+# Optional: restrict an arm to a subset of tasks, e.g.
+# library_tasks: {native: [degree, edge_number, neighbor]}
+models: [hf-qwen3-8b-nscale, hf-deepseek-v3.1-novita, hf-gemma-4-31b, hf-deepseek-v4-flash]
+exec: {timeout: 20, mem_mb: 1024, workers: 4}

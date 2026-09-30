@@ -1,0 +1,15 @@
+name: smoke
+datasets:
+  graphqa:
+    n_graphs: 10
+    seed: 0
+    generators: [er, ba, sfn, sbm, star, path, complete]
+    tasks: [node_degree, cycle_check, edge_existence]
+variants:
+  relabel: {seeds: 1}
+  order: {kinds: [shuffle_all]}
+  syntax: {kinds: [json, networkx_code]}
+modes: [direct, code, graph_as_code]
+libraries: [networkx, native]
+models: [stub]
+exec: {timeout: 5, mem_mb: 1024, workers: 4}

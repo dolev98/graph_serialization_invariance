@@ -1,0 +1,9 @@
+model,library,n_undirected,n_recovered,built_digraph_after,accuracy_after,note
+hf-qwen3-8b-nscale,native,1123,0,,0.9910952804986642,direction not observable in native arm
+hf-qwen3-8b-nscale,networkx,1123,1123,0.0,0.6625111308993766,
+hf-deepseek-v4-flash,native,1123,0,,0.9109528049866429,direction not observable in native arm
+hf-deepseek-v4-flash,networkx,1123,813,0.0,1.0,
+hf-gemma-4-31b,native,1123,0,,1.0,direction not observable in native arm
+hf-gemma-4-31b,networkx,1123,1123,0.0,1.0,
+hf-deepseek-v3.1-novita,native,1123,0,,1.0,direction not observable in native arm
+hf-deepseek-v3.1-novita,networkx,1123,797,0.0,0.9002671415850401,

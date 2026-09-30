@@ -1,0 +1,9 @@
+dataset,mode,library,rung,model,accuracy,n,transcription,construction,logic,no_computation,execution,format,unverifiable
+erdos,code,native,prose,hf-deepseek-v4-flash,0.9808333333333333,1200,0.0,0.0,0.010833333333333334,0.0,0.008333333333333333,0.0,0.0
+erdos,code,native,json,hf-deepseek-v4-flash,0.9741666666666666,1200,0.0,0.0,0.0075,0.0,0.018333333333333333,0.0,0.0
+erdos,code,native,networkx_code,hf-deepseek-v4-flash,0.9783333333333334,1200,0.0,0.0,0.01,0.0,0.011666666666666667,0.0,0.0
+erdos,graph_as_code,native,injected,hf-deepseek-v4-flash,0.9325,1200,0.0,0.0,0.0675,0.0,0.0,0.0,0.0
+erdos,code,networkx,prose,hf-deepseek-v4-flash,0.9925,1200,0.0,0.0,0.0075,0.0,0.0,0.0,0.0
+erdos,code,networkx,json,hf-deepseek-v4-flash,0.9966666666666667,1200,0.0,0.0,0.0033333333333333335,0.0,0.0,0.0,0.0
+erdos,code,networkx,networkx_code,hf-deepseek-v4-flash,0.7058333333333333,1200,0.0,0.0,0.005,0.0,0.2891666666666667,0.0,0.0
+erdos,graph_as_code,networkx,injected,hf-deepseek-v4-flash,0.9375,1200,0.0,0.0,0.06166666666666667,0.0,0.0008333333333333334,0.0,0.0

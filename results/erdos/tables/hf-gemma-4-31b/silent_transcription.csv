@@ -1,0 +1,17 @@
+dataset,mode,library,axis,model,correct,rate,n
+erdos,code,native,canonical,hf-gemma-4-31b,True,0.0,1200
+erdos,code,native,order,hf-gemma-4-31b,False,1.0,1
+erdos,code,native,order,hf-gemma-4-31b,True,0.0008520306731042318,3521
+erdos,code,native,relabel,hf-gemma-4-31b,False,1.0,1
+erdos,code,native,relabel,hf-gemma-4-31b,True,0.0004177982034677251,4787
+erdos,code,native,structure,hf-gemma-4-31b,False,0.5,2
+erdos,code,native,structure,hf-gemma-4-31b,True,0.006303466906798739,2221
+erdos,code,native,syntax,hf-gemma-4-31b,True,0.0008350730688935282,2395
+erdos,code,networkx,canonical,hf-gemma-4-31b,True,0.0,1200
+erdos,code,networkx,order,hf-gemma-4-31b,True,0.000851305334846765,3524
+erdos,code,networkx,relabel,hf-gemma-4-31b,False,0.3333333333333333,3
+erdos,code,networkx,relabel,hf-gemma-4-31b,True,0.0004174493842621582,4791
+erdos,code,networkx,structure,hf-gemma-4-31b,False,0.3333333333333333,9
+erdos,code,networkx,structure,hf-gemma-4-31b,True,0.004852227613586237,2267
+erdos,code,networkx,syntax,hf-gemma-4-31b,False,0.0,3
+erdos,code,networkx,syntax,hf-gemma-4-31b,True,0.0012547051442910915,2391

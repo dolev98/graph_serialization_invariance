@@ -1,0 +1,28 @@
+[project]
+name = "gsi"
+version = "0.1.0"
+description = "Serialization-invariance audit of LLM graph code generation"
+requires-python = ">=3.10"
+dependencies = [
+    "networkx>=3.2",
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "pyyaml>=6",
+    "openai>=1.40",
+    "matplotlib>=3.8",
+]
+
+[project.optional-dependencies]
+erdos = ["datasets>=2.19"]                                   # rebuilding the Erdős instances
+reproduce = ["huggingface_hub>=0.24", "pyarrow>=14", "scipy>=1.11", "statsmodels>=0.14"]  # scripts/reproduce.sh
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

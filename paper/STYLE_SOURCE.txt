@@ -1,0 +1,4 @@
+Official ACL style files, downloaded unmodified.
+Repository: https://github.com/acl-org/acl-style-files
+Commit: d5adc823ff0f80f98c80405ca0ab66c68e684409
+Files: acl.sty, acl_natbib.bst

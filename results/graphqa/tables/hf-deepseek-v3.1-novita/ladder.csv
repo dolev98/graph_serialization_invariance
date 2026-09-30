@@ -1,0 +1,11 @@
+dataset,mode,library,rung,model,accuracy,n,transcription,construction,logic,no_computation,execution,format,unverifiable
+graphqa,code,native,prose,hf-deepseek-v3.1-novita,0.8714285714285714,700,0.0,0.0,0.12857142857142856,0.0,0.0,0.0,0.0
+graphqa,code,native,plain,hf-deepseek-v3.1-novita,0.8642857142857143,700,0.0,0.0,0.1357142857142857,0.0,0.0,0.0,0.0
+graphqa,code,native,json,hf-deepseek-v3.1-novita,0.8457142857142858,700,0.0,0.0,0.15428571428571428,0.0,0.0,0.0,0.0
+graphqa,code,native,networkx_code,hf-deepseek-v3.1-novita,0.86,700,0.0,0.0,0.14,0.0,0.0,0.0,0.0
+graphqa,graph_as_code,native,injected,hf-deepseek-v3.1-novita,0.8728571428571429,700,0.0,0.0,0.12714285714285714,0.0,0.0,0.0,0.0
+graphqa,code,networkx,prose,hf-deepseek-v3.1-novita,0.8585714285714285,700,0.0,0.0,0.12714285714285714,0.002857142857142857,0.0014285714285714286,0.012857142857142857,0.0
+graphqa,code,networkx,plain,hf-deepseek-v3.1-novita,0.8571428571428571,700,0.0,0.0,0.12714285714285714,0.0,0.0014285714285714286,0.014285714285714285,0.0
+graphqa,code,networkx,json,hf-deepseek-v3.1-novita,0.86,700,0.0,0.0,0.13142857142857142,0.0,0.0,0.008571428571428572,0.0
+graphqa,code,networkx,networkx_code,hf-deepseek-v3.1-novita,0.8557142857142858,700,0.0,0.0,0.12714285714285714,0.0014285714285714286,0.007142857142857143,0.01,0.0
+graphqa,graph_as_code,networkx,injected,hf-deepseek-v3.1-novita,0.8728571428571429,700,0.0,0.0,0.12714285714285714,0.0,0.0,0.0,0.0

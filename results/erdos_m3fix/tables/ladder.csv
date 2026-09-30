@@ -1,0 +1,9 @@
+dataset,mode,library,rung,model,accuracy,n,transcription,construction,logic,no_computation,execution,format,unverifiable
+erdos,graph_as_code,native,injected,hf-deepseek-v3.1-novita,1.0,1200,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+erdos,graph_as_code,networkx,injected,hf-deepseek-v3.1-novita,0.9066666666666666,1200,0.0,0.0,0.009166666666666667,0.0,0.08416666666666667,0.0,0.0
+erdos,graph_as_code,native,injected,hf-deepseek-v4-flash,0.9058333333333334,1200,0.0,0.0,0.010833333333333334,0.0,0.08333333333333333,0.0,0.0
+erdos,graph_as_code,networkx,injected,hf-deepseek-v4-flash,0.9908333333333333,1200,0.0,0.0008333333333333334,0.008333333333333333,0.0,0.0,0.0,0.0
+erdos,graph_as_code,native,injected,hf-gemma-4-31b,1.0,1200,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+erdos,graph_as_code,networkx,injected,hf-gemma-4-31b,1.0,1200,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+erdos,graph_as_code,native,injected,hf-qwen3-8b-nscale,0.9916666666666667,1200,0.0,0.0,0.008333333333333333,0.0,0.0,0.0,0.0
+erdos,graph_as_code,networkx,injected,hf-qwen3-8b-nscale,0.6666666666666666,1200,0.0,0.0,0.0,0.0,0.3333333333333333,0.0,0.0

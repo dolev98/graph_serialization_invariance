@@ -1,0 +1,9 @@
+dataset,mode,library,rung,model,accuracy,n,transcription,construction,logic,no_computation,execution,format,unverifiable
+erdos,code,native,prose,hf-qwen3-8b-nscale,0.95,1200,0.0016666666666666668,0.0,0.04416666666666667,0.0,0.004166666666666667,0.0,0.0
+erdos,code,native,json,hf-qwen3-8b-nscale,0.9141666666666667,1200,0.0008333333333333334,0.0,0.07916666666666666,0.0,0.005833333333333334,0.0,0.0
+erdos,code,native,networkx_code,hf-qwen3-8b-nscale,0.9225,1200,0.0,0.0,0.07083333333333333,0.0,0.006666666666666667,0.0,0.0
+erdos,graph_as_code,native,injected,hf-qwen3-8b-nscale,0.9375,1200,0.0,0.0,0.0625,0.0,0.0,0.0,0.0
+erdos,code,networkx,prose,hf-qwen3-8b-nscale,0.7325,1200,0.0008333333333333334,0.0,0.014166666666666666,0.0,0.2525,0.0,0.0
+erdos,code,networkx,json,hf-qwen3-8b-nscale,0.6991666666666667,1200,0.0008333333333333334,0.0,0.0033333333333333335,0.0,0.2966666666666667,0.0,0.0
+erdos,code,networkx,networkx_code,hf-qwen3-8b-nscale,0.5508333333333333,1200,0.0,0.0,0.0075,0.0,0.44166666666666665,0.0,0.0
+erdos,graph_as_code,networkx,injected,hf-qwen3-8b-nscale,0.6066666666666667,1200,0.0,0.0,0.06,0.0,0.3333333333333333,0.0,0.0

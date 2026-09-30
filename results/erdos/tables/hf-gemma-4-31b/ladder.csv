@@ -1,0 +1,9 @@
+dataset,mode,library,rung,model,accuracy,n,transcription,construction,logic,no_computation,execution,format,unverifiable
+erdos,code,native,prose,hf-gemma-4-31b,1.0,1200,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+erdos,code,native,json,hf-gemma-4-31b,1.0,1200,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+erdos,code,native,networkx_code,hf-gemma-4-31b,0.9958333333333333,1200,0.0,0.0,0.0,0.0,0.004166666666666667,0.0,0.0
+erdos,graph_as_code,native,injected,hf-gemma-4-31b,0.9325,1200,0.0,0.0,0.0675,0.0,0.0,0.0,0.0
+erdos,code,networkx,prose,hf-gemma-4-31b,1.0,1200,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+erdos,code,networkx,json,hf-gemma-4-31b,0.9975,1200,0.0,0.0,0.0,0.0,0.0025,0.0,0.0
+erdos,code,networkx,networkx_code,hf-gemma-4-31b,0.995,1200,0.0,0.0,0.0,0.0,0.005,0.0,0.0
+erdos,graph_as_code,networkx,injected,hf-gemma-4-31b,0.925,1200,0.0,0.0,0.075,0.0,0.0,0.0,0.0

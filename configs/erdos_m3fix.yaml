@@ -1,0 +1,35 @@
+name: erdos_m3fix
+# The Erdős graph-as-code (M3) control, rerun with the graph type stated explicitly.
+#
+# Why: M3 removes the graph text, and the harness noted a graph's type only when it was directed, so
+# an undirected M3 prompt stated its type only if the task preamble did. Five of the twelve Erdős
+# preambles do not; `neighbor` mentions only the directed case, and every model read its undirected
+# graphs as directed (neighbor: 28/100 in every M3 arm; see the paper's Graph-as-Code section and Appendix D).
+# `inject_graph_type` adds one sentence to undirected M3 prompts. Nothing else changes: same
+# instances and variants as `erdos`, same template, same models. Direct and code-from-text are not
+# rerun -- their prompts carry the graph text and are unchanged.
+#
+# Prepare (variants.jsonl is Git-ignored; the stage rebuilds it deterministically from the tracked
+# instances, byte-identical to the base run's):
+#       python scripts/run.py --config configs/erdos_m3fix.yaml --stages variants
+#       cmp data/processed/erdos/variants.jsonl data/processed/erdos_m3fix/variants.jsonl  (if both exist)
+# Run:  python scripts/run.py --config configs/erdos_m3fix.yaml --stages llm,exec,score
+# Then: python scripts/analyze.py --config configs/erdos_m3fix.yaml
+#       python scripts/m3fix_compare.py         (paired against results/erdos on record_id)
+inject_graph_type: true
+datasets:
+  erdos:
+    tasks: [shortest_path, triangles, degree, edge_number, connected_component_number, diameter,
+            density, edge_existence, has_cycle, neighbor, common_neighbor, bridges]
+    n_per_task: 100
+    seed: 0
+    max_prompt_chars: 6000
+    variants:
+      relabel: {seeds: 3}
+      order: {kinds: [sorted_st, s_sorted_t_shuffled, shuffle_all], seeds: 1}
+      structure: {toggle: true, replicated: true}
+      syntax: {kinds: [json, networkx_code]}
+modes: [graph_as_code]
+libraries: [networkx, native]
+models: [hf-qwen3-8b-nscale, hf-deepseek-v4-flash, hf-gemma-4-31b, hf-deepseek-v3.1-novita]
+exec: {timeout: 20, mem_mb: 1024, workers: 6}

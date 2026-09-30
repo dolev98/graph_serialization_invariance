@@ -1,0 +1,16 @@
+dataset,mode,library,axis,model,execution,format,logic,no_computation,transcription,n_failures
+graphqa,code,native,canonical,hf-qwen3-8b-nscale,0.0,0.0,0.632,0.053,0.316,19
+graphqa,code,native,order,hf-qwen3-8b-nscale,0.0,0.024,0.905,0.0,0.071,42
+graphqa,code,native,relabel,hf-qwen3-8b-nscale,0.012,0.0,0.679,0.036,0.274,84
+graphqa,code,native,structure,hf-qwen3-8b-nscale,0.018,0.0,0.951,0.0,0.031,448
+graphqa,code,native,syntax,hf-qwen3-8b-nscale,0.143,0.0,0.829,0.0,0.029,35
+graphqa,code,networkx,canonical,hf-qwen3-8b-nscale,0.087,0.0,0.841,0.0,0.072,69
+graphqa,code,networkx,order,hf-qwen3-8b-nscale,0.13,0.006,0.847,0.0,0.017,177
+graphqa,code,networkx,relabel,hf-qwen3-8b-nscale,0.109,0.0,0.816,0.0,0.075,294
+graphqa,code,networkx,structure,hf-qwen3-8b-nscale,0.259,0.0,0.615,0.015,0.111,135
+graphqa,code,networkx,syntax,hf-qwen3-8b-nscale,0.79,0.0,0.21,0.0,0.0,309
+graphqa,graph_as_code,networkx,canonical,hf-qwen3-8b-nscale,1.0,0.0,0.0,0.0,0.0,100
+graphqa,graph_as_code,networkx,order,hf-qwen3-8b-nscale,1.0,0.0,0.0,0.0,0.0,274
+graphqa,graph_as_code,networkx,relabel,hf-qwen3-8b-nscale,1.0,0.0,0.0,0.0,0.0,400
+graphqa,graph_as_code,networkx,structure,hf-qwen3-8b-nscale,1.0,0.0,0.0,0.0,0.0,200
+graphqa,graph_as_code,networkx,syntax,hf-qwen3-8b-nscale,1.0,0.0,0.0,0.0,0.0,300

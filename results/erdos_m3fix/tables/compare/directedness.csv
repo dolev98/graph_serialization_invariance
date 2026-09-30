@@ -1,0 +1,9 @@
+model,graph,n,n_recovered_base,mismatch_base,n_recovered_fixed,mismatch_fixed
+hf-deepseek-v3.1-novita,undirected,13412,10770,0.18644382544103993,9469,0.0
+hf-deepseek-v3.1-novita,directed,834,806,0.0,806,0.0
+hf-deepseek-v4-flash,undirected,13412,11407,0.08775313404050145,9684,0.0
+hf-deepseek-v4-flash,directed,834,640,0.046875,639,0.07668231611893583
+hf-gemma-4-31b,undirected,13412,13411,0.13309969428081425,13412,0.0
+hf-gemma-4-31b,directed,834,834,0.0,834,0.0
+hf-qwen3-8b-nscale,undirected,13412,13412,0.07463465553235908,13412,0.0
+hf-qwen3-8b-nscale,directed,834,790,0.0,790,0.0
