@@ -37,8 +37,7 @@
   \begin{tabular}{@{}c@{\quad}c@{\quad}c@{\quad}c@{}}
     \textbf{Ram Kedem} & \textbf{Yehonatan Barel} & \textbf{Ido Azoulay} & \textbf{Dolev Abudi} \\
     206844144 & 208646422 & 212710958 & 323096099
-  \end{tabular} \\[12pt]
-  \normalfont\normalsize Code and data: \url{https://github.com/dolev98/graph_serialization_invariance}
+  \end{tabular}
 }
 
 \begin{document}
@@ -48,7 +47,7 @@
 
 \begin{abstract}
 
-Language models often answer graph questions better by writing code than by answering directly. However, the answer can depend on how the graph is serialized, and a correct answer for one serialization does not guarantee a correct answer for another. We ask: \emph{does solving a graph problem using code generation return the same answer under equivalent serializations of the same graph, and if not, at which step does the fragility enter?} Across four models and two datasets, changing one aspect of the serialization at a time, we find that code generation is far more robust to the serialization, changing its answer two to five times less often than direct answering, a gap that grows with graph size, yet no condition in which the model reads the graph is fully invariant. The fragility enters mostly in the program the model writes, not in its copy of the graph. We also find that keeping the graph out of the prompt nearly removes the sensitivity at no cost in accuracy.
+Language models often answer graph questions better by writing code than by answering directly. However, the answer can depend on how the graph is serialized, and a correct answer for one serialization does not guarantee a correct answer for another. We ask: \emph{does solving a graph problem using code generation return the same answer under equivalent serializations of the same graph, and if not, at which step does the fragility enter?} Across four models and two datasets, changing one aspect of the serialization at a time, we find that code generation is far more robust to the serialization, changing its answer two to five times less often than direct answering, a gap that grows with graph size, yet no condition in which the model reads the graph is fully invariant. The fragility enters mostly in the program the model writes, not in its copy of the graph. We also find that keeping the graph out of the prompt nearly removes the sensitivity at no cost in accuracy. Code and data are on \href{https://github.com/dolev98/graph_serialization_invariance}{\textcolor{darkblue}{GitHub}} and \href{https://huggingface.co/datasets/Dolevabudi/graph-serialization-invariance-full}{\textcolor{darkblue}{Hugging Face}}.
 \end{abstract}
 
 \section{Introduction}
@@ -63,6 +62,8 @@ Our contributions are as follows. (i) A per-instance, single-factor invariance m
 
 \textbf{Graph reasoning from text.} NLGraph \citep{wang} and GraphQA \citep{fatemi} showed that LLMs solve small graph problems posed in text, but unreliably: on GraphQA the best and worst encodings of the same graphs differ by 4.8 to 61.8 points for PaLM 62B. Erdős \citep{guo} extends evaluation to 50 tasks.
 
+% One line tighter, so the body stays within 5 pages with the links in the abstract.
+\looseness=-1
 \textbf{Serialization invariance.} The order of a graph's description alone shifts accuracy \citep{ge}, and \citet{herbst}, varying node labels, computational structure and syntax one at a time, find that each factor changes outputs. Their models answer directly, reading NetworkX code as text rather than running it, and their per-example measure covers numeric answers only. We measure per-instance agreement on executed code, for every answer type.
 
 \textbf{Computing with code.} Program-aided reasoning hands the computation to an interpreter \citep{gao}. CodeGraph \citep{cai} has GPT-3.5 write Python for GraphQA tasks, and across six encodings its best-worst accuracy gap is smaller than under chain-of-thought on every task. \citet{finkelshtein} find code generation the strongest interaction mode for node classification on text-rich graphs. Neither tests invariance: \citet{finkelshtein} use a single serialization, and CodeGraph compares aggregate accuracy over encodings that change several factors at once. Its one-shot example also supplies the solving function, so its model need only copy the graph, not write the solving step, where we find the failures.
